@@ -1,0 +1,19 @@
+<header>
+  <h1>Transactions</h1>
+  <img ngSrc="assets/icons/magnifier.svg" alt="Search" width="24" height="24" />
+</header>
+
+<ul>
+  @for(group of transactions.keys(); track group) {
+  <li>
+    <h2>{{ group | date : "MMMM d" }}</h2>
+  </li>
+  <li>
+    @for(tx of transactions.get(group); track tx.id) {
+    <app-transaction [tx]="tx"></app-transaction>
+    }
+  </li>
+  } @empty {
+  <li>No transactions yet</li>
+  }
+</ul>

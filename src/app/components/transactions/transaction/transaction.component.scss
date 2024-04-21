@@ -1,0 +1,41 @@
+:host {
+  display: grid;
+  grid-template-areas: "picture description amount" "picture date amount";
+  grid-template-columns: auto 1fr auto;
+  gap: 5px;
+
+  .picture {
+    grid-area: picture;
+  }
+
+  .description {
+    grid-area: description;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .amount {
+    grid-area: amount;
+  }
+
+  .date {
+    grid-area: date;
+    color: #7a7a7a;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .amount {
+    font-size: 20px;
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .balance-negative {
+    color: #fe263f;
+  }
+  .balance-positive {
+    color: #18aa15;
+  }
+}

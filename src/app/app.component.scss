@@ -1,0 +1,41 @@
+:host {
+  display: grid;
+  grid-template-areas: "main" "navbar";
+  grid-template-rows: 1fr auto;
+  grid-auto-flow: row;
+  height: 100dvh;
+  gap: 15px;
+  
+  app-navbar {
+    grid-area: navbar;
+    width: 100%;
+    justify-self: center;
+    border-top: 1px solid #ccc;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+  }
+
+  main {
+    grid-area: main;
+  }
+}
+
+@media (min-width: 768px) {
+  :host {
+    grid-template-areas: "navbar main";
+    grid-template-columns: min-content minmax(400px, 768px);
+    grid-template-rows: none;
+    grid-auto-flow: column;
+    height: auto;
+
+    app-navbar {
+      position: static;
+      border-top: 0;
+      border-right: 1px solid #ccc;
+    }
+  }
+}

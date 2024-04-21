@@ -1,0 +1,13 @@
+@if (vm$ | async; as vm) {
+<app-slider>
+  @for(card of vm.cards.data; track card.id) {
+  <app-card [card]="card"></app-card>
+  }
+</app-slider>
+
+<app-controls></app-controls>
+
+<app-transactions [transactions]="vm.transactions.data"></app-transactions>
+} @else {
+<p>Something went wrong, please try again</p>
+}

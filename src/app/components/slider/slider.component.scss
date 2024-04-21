@@ -1,0 +1,13 @@
+:host {
+    overflow: auto;
+    display: block;
+    width: 100%;
+    max-width: 100dvw;
+    padding: 1em;
+    scrollbar-width: thin;
+    
+    .wrapper {
+        display: flex;
+        gap: 15px
+    }
+}   

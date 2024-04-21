@@ -1,0 +1,15 @@
+<div
+  [ngStyle]="{
+    '--background-from': card.colors[0],
+    '--background-to': card.colors[1]
+  }"
+  class="card"
+>
+  <span class="card__balance">{{ card.balance | currency : "USD" }}</span>
+
+  <span class="card__number">{{ card.number | hideCardNumber }}</span>
+
+  @if(card.picture) {
+  <img class="card__logo" [ngSrc]="card.picture" [alt]="card.name" width="84" height="58" />
+  }
+</div>
