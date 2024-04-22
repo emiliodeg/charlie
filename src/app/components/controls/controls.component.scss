@@ -1,6 +1,6 @@
 :host {
   display: grid;
   grid-auto-flow: column;
-  gap: 15px;
+  gap: var(--gap-md);
   justify-content: center;
 }

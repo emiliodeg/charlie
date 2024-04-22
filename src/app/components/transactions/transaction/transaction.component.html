@@ -1,8 +1,10 @@
-<img [ngSrc]="tx.picture" [alt]="tx.description" width="32" height="32" />
-<span class="description">{{ tx.description }}</span>
-<time class="date" [attr.datetime]="tx.date">{{
+<span class="transaction__picture">
+  <img [ngSrc]="tx.picture" [alt]="tx.description" width="32" height="32" />
+</span>
+<span class="transaction__description">{{ tx.description }}</span>
+<time class="transaction__date" [attr.datetime]="tx.date">{{
   tx.date | date : "MMM d y HH:mm"
 }}</time>
-<span class="amount" [appBalanceColor]="tx.amount">{{
+<span class="transaction__amount" [appBalanceColor]="tx.amount">{{
   tx.amount | currency : "USD"
 }}</span>

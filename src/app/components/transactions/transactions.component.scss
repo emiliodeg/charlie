@@ -9,11 +9,11 @@
     grid-auto-flow: column;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: var(--gap-md);
 
     h1 {
-      font-size: 24px;
-      font-weight: 500;
+      font-size: var(--font-size-lg);;
+      font-weight: var(--font-weight-bold);
     }
   }
 
@@ -23,9 +23,13 @@
     padding-left: 0;
 
     h2 {
-      font-size: 16px;
-      font-weight: 400;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-normal);
       margin-block: 1rem;
+    }
+
+    li {
+      margin-bottom: var(--gap-md)
     }
   }
 }

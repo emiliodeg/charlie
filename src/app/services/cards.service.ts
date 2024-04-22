@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { ICard } from '@app/models/card.model';
 import { IResponsePaginated } from '@app/models/response.modal';
 import { of } from 'rxjs';
@@ -20,7 +19,7 @@ export class CardsService {
         name: 'MasterCard',
         number: '1234567890123456',
         balance: 123.45,
-        colors: ['#000000', '#ffffff'],
+        colors: ['#4B4F5B', '#6B7183'],
         picture: './assets/icons/mastercard.svg',
       },
       {
@@ -28,7 +27,7 @@ export class CardsService {
         name: 'Visa',
         number: '5678901234512346',
         balance: 784.56,
-        colors: ['#000000', '#ffffff'],
+        colors: ['#407288', '#189BD5'],
         picture: './assets/icons/visa.svg',
       },
     ],

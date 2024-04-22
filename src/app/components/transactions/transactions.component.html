@@ -8,12 +8,11 @@
   <li>
     <h2>{{ group | date : "MMMM d" }}</h2>
   </li>
+  @for(tx of transactions.get(group); track tx.id) {
   <li>
-    @for(tx of transactions.get(group); track tx.id) {
     <app-transaction [tx]="tx"></app-transaction>
-    }
   </li>
-  } @empty {
+  } } @empty {
   <li>No transactions yet</li>
   }
 </ul>
